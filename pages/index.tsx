@@ -42,15 +42,43 @@ export default function Home() {
         </div>
 
       </div>
+      <div className={tw`flex w-full pl-20 pt-20`}>
+        <img src="/images/separateur.png" alt="" />
+      </div>
+      <div className={tw`flex w-full h-[90vh] text-8xl items-center text-black`}>
 
-      <div className={tw`flex w-full h-[90vh] px-10 text-8xl items-center text-black`}>
+        <div className={tw`absolute`}>
+          <img className={tw`h-[90vh]`} src="/images/bulleback.svg" alt="" />
+        </div>
         <div className={tw`px-20 max-w-[60%]`}>
           <h2>QUI SOMMES NOUS</h2>
-          <p className={tw`text-base text-gray-400 mt-8`}> Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-
+          <p className={tw`text-base text-gray-500 mt-8`}> Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+          <div className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
+            <p className={tw`font-bold text-black text-lg`}> DÉCOUVRIR NOS CRÉATIONS</p>
+            <img src="/images/fleche.png" alt="" />
+          </div>
+        </div>
+        <div>
+          <img src="/images/imageteam.png" alt="image de l'équipe" />
         </div>
       </div>
+      <div className={tw`flex w-full pl-20 pt-20`}>
+        <img src="/images/separateur.png" alt="" />
+      </div>
 
+      <div className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black`}>
+        <div className={tw`px-20 max-w-[60%]`}>
+          <h2>NOS SERVICES</h2>
+          <p className={tw`text-base text-gray-500 mt-8`}> Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+
+        </div>
+        <div className={tw`flex place-content-center flex-row items-center space-x-10 text-black text-lg`}>
+          <div className={tw`cursor-pointer`}>DESIGN</div>
+          <div className={tw`cursor-pointer`}>DEVELOPPEMENT</div>
+          <div className={tw`cursor-pointer`}>SEO</div>
+          <div className={tw`cursor-pointer`}>BLOCKCHAIN</div>
+        </div>
+      </div>
 
     </div>
   )
