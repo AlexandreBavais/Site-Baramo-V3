@@ -6,6 +6,7 @@ import DesignLottie from '../public/lottie/design.json';
 import DevLottie from '../public/lottie/dev.json';
 import SeoLottie from "../public/lottie/seo.json";
 import BlockLottie from "../public/lottie/block.json";
+import CreationCard from "../src/components/creationcard";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       </Head>
 
 
-      <div className={tw`flex w-full h-[10vh] sticky items-center px-10 justify-between sticky top-0 ${css({ "backdrop-filter": "blur(12px)" })}`}>
+      <div className={tw`flex w-full h-[10vh] sticky items-center px-10 justify-between sticky top-0 ${css({ "backdrop-filter": "blur(25px)" })}`}>
         <div className={tw`flex flex-row items-center space-x-4`}> <img src="/images/logo.svg" alt="logo baramo" />
           <p className={tw`font-medium text-xl text-black`}>BARAMO</p>
         </div>
@@ -104,7 +105,29 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={tw`flex w-full pl-20 pt-20`}>
+        <img src="/images/separateur.png" alt="" />
+      </div>
+      <div className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black`}>
 
+        <div className={tw`absolute right-0`}>
+          <img className={tw`h-[90vh]`} src="/images/bulleback2.svg" alt="" />
+        </div>
+        <div className={tw`px-20 max-w-[60%]`}>
+          <h2>NOS CRÉATIONS</h2>
+          <p className={tw`text-base text-gray-500 mt-8`}> Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+          <div className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
+          </div>
+        </div>
+        <div className={tw`flex flex-row justify-evenly`}>
+              <CreationCard image="/images/bu-s.jpg" titre="BRANDING" offset={0}/>
+              <CreationCard image="/images/olw.jpg" titre="WEB SITE" offset={75}/>
+              <CreationCard image="/images/bu-v1.png" titre="UX/UI DESIGN" offset={0}/>
+              <CreationCard image="/images/cryptoflower.png" titre="UX/UI DESIGN" offset={75}/>
+              <CreationCard image="/images/facelight.jpg" titre="ILLUSTRATION" offset={0}/>
+            </div>  
+
+      </div>
     </div>
   )
 }
