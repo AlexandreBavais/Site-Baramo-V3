@@ -10,7 +10,7 @@ import BlockLottie from "../public/lottie/block.json";
 export default function Home() {
   return (
 
-    <div className={tw`flex flex-1 w-full h-full min-h-[100vh] max-w-full flex-col ${css({ backgroundImage: "url('/images/back.svg')" })} overflow-hidden`}>
+    <div className={tw`flex flex-1 w-full h-full min-h-[100vh] flex-col ${css({ backgroundImage: "url('/images/back.svg')" })}`}>
       <Head>
         <title>Baramo</title>
         <meta name="description" content="Baramo est une entreprise française de développement informatique et de graphisme, pour vous accompagner dans votre projet." />
