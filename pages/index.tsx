@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
 
 
-      <div className={tw`flex w-full h-[10vh] sticky items-center px-10 justify-between sticky top-0 ${css({ "backdrop-filter": "blur(25px)" })}`}>
+      <div className={tw`flex w-full h-[10vh] items-center px-10 justify-between sticky top-0 ${css({ "backdrop-filter": "blur(25px)" })}`}>
         <div className={tw`flex flex-row items-center space-x-4`}> <img src="/images/logo.svg" alt="logo baramo" />
           <p className={tw`font-medium text-xl text-black`}>BARAMO</p>
         </div>
