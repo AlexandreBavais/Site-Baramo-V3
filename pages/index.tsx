@@ -7,6 +7,7 @@ import DevLottie from '../public/lottie/dev.json';
 import SeoLottie from "../public/lottie/seo.json";
 import BlockLottie from "../public/lottie/block.json";
 import CreationCard from "../src/components/creationcard";
+import ContactSection from '../src/components/ContactSection';
 
 export default function Home() {
   return (
@@ -127,6 +128,12 @@ export default function Home() {
               <CreationCard image="/images/facelight.jpg" titre="ILLUSTRATION" offset={0}/>
             </div>  
 
+      </div>
+      <div className={tw`flex w-full pl-20 pt-20`}>
+        <img src="/images/separateur.png" alt="" />
+      </div>
+      <div className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black px-20`}>
+        <ContactSection/>
       </div>
     </div>
   )
