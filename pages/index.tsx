@@ -9,7 +9,7 @@ import BlockLottie from "../public/lottie/block.json";
 import CreationCard from "../src/components/creationcard";
 import ContactSection from '../src/components/ContactSection';
 import { useRef } from 'react';
-import Teamsection from '../src/components/teamsection';
+import TeamSection from '../src/components/TeamSection';
 
 export default function Home() {
 
@@ -148,7 +148,7 @@ export default function Home() {
         <img src="/images/separateur.png" alt="" />
       </div>
       <div ref={EquipeRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black px-20`}>
-        <Teamsection />
+        <TeamSection />
 
       </div>
       <div className={tw`flex w-full pl-20 pt-20`}>
