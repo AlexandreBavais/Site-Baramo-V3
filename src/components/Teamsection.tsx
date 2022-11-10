@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { tw, css } from 'twind/css';
 
-const Teamsection = (props: any) => {
+const TeamSection = (props: any) => {
 
   const [selected, setSelected] = useState("")
   const [hovered, setHovered] = useState(false)
@@ -27,33 +27,33 @@ const Teamsection = (props: any) => {
   const displayedData = data[selected]
 
   return (
-    <div className={tw`flex flex-row`}>
+    <div className={tw`flex flex-row `}>
       <div className={tw`px-20 w-2/3`}>
         <h2>LA TEAM</h2>
         <div 
           onMouseEnter={()=>{ setSelected("lucas"); setHovered(true) }} 
           onMouseLeave={()=>{ setHovered(false) }} 
-          className={tw`text-4xl text-black mt-8`}
+          className={tw`text-6xl mt-36 text-[#989898] hover:text-black transition-[color] ease-in-out duration-500`}
         > 
           LUCAS RAMADOUR 
         </div>
         <div
           onMouseEnter={()=>{ setSelected("clement"); setHovered(true) }} 
           onMouseLeave={()=>{ setHovered(false) }} 
-          className={tw`text-4xl text-black mt-8 pl-20`}
+          className={tw`text-6xl mt-8 pl-20 text-[#989898] hover:text-black transition-[color] ease-in-out duration-500`}
         > 
           CLEMENT MOLLER 
         </div>
         <div 
           onMouseEnter={()=>{ setSelected("alexandre"); setHovered(true) }}
           onMouseLeave={()=>{ setHovered(false) }} 
-          className={tw`text-4xl text-black mt-8`}
+          className={tw`text-6xl mt-8 text-[#989898] hover:text-black transition-[color] ease-in-out duration-500`}
         > 
           ALEXANDRE BAVAIS
         </div>
       </div>
       <div className={tw`opacity-0 mt-10 flex flex-row space-x-6 ${hovered ? "opacity-100 mt-0" : ""} transition-all ease-in-out duration-500`}>
-        <img className={tw`h-48`} src={displayedData?.image}/>
+        <img className={tw`h-48`} src={displayedData?.image} alt=''/>
         <div className={tw`flex flex-col`}>
           <div className={tw`text-2xl font-bold`}>{displayedData?.nom || ''}</div>
           <div className={tw`text-2xl`}>{displayedData?.description || ''}</div>
@@ -63,4 +63,4 @@ const Teamsection = (props: any) => {
   )
 }
 
-export default Teamsection
+export default TeamSection
