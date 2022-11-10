@@ -9,6 +9,7 @@ import BlockLottie from "../public/lottie/block.json";
 import CreationCard from "../src/components/creationcard";
 import ContactSection from '../src/components/ContactSection';
 import { useRef } from 'react';
+import Teamsection from '../src/components/teamsection';
 
 export default function Home() {
 
@@ -20,8 +21,8 @@ export default function Home() {
   const EquipeRef = useRef(null);
   const ContactRef = useRef(null);
 
-  const scrollTo = (ref:any) => {
-    window.scrollTo({ top: ref.current.getBoundingClientRect().top + window.pageYOffset - (NavbarRef?.current?.clientHeight || 0 ), behavior: 'smooth' })
+  const scrollTo = (ref: any) => {
+    window.scrollTo({ top: ref.current.getBoundingClientRect().top + window.pageYOffset - (NavbarRef?.current?.clientHeight || 0), behavior: 'smooth' })
   }
 
   return (
@@ -135,25 +136,26 @@ export default function Home() {
           </div>
         </div>
         <div className={tw`flex flex-row justify-evenly`}>
-              <CreationCard image="/images/bu-s.jpg" titre="BRANDING" offset={0}/>
-              <CreationCard image="/images/olw.jpg" titre="WEB SITE" offset={75}/>
-              <CreationCard image="/images/bu-v1.png" titre="UX/UI DESIGN" offset={0}/>
-              <CreationCard image="/images/cryptoflower.png" titre="UX/UI DESIGN" offset={75}/>
-              <CreationCard image="/images/facelight.jpg" titre="ILLUSTRATION" offset={0}/>
-            </div>  
+          <CreationCard image="/images/bu-s.jpg" titre="BRANDING" offset={0} />
+          <CreationCard image="/images/olw.jpg" titre="WEB SITE" offset={75} />
+          <CreationCard image="/images/bu-v1.png" titre="UX/UI DESIGN" offset={0} />
+          <CreationCard image="/images/cryptoflower.png" titre="UX/UI DESIGN" offset={75} />
+          <CreationCard image="/images/facelight.jpg" titre="ILLUSTRATION" offset={0} />
+        </div>
 
       </div>
       <div className={tw`flex w-full pl-20 pt-20`}>
         <img src="/images/separateur.png" alt="" />
       </div>
       <div ref={EquipeRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black px-20`}>
+        <Teamsection />
 
       </div>
       <div className={tw`flex w-full pl-20 pt-20`}>
         <img src="/images/separateur.png" alt="" />
       </div>
       <div ref={ContactRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black px-20`}>
-        <ContactSection/>
+        <ContactSection />
       </div>
     </div>
   )
