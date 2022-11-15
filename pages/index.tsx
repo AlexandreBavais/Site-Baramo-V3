@@ -160,8 +160,8 @@ export default function Home() {
       </div>
 
       <div ref={Footer} className={tw`flex w-full h-[10vh] items-center px-10 justify-between sticky top-0 z-20`}>
-        <div className={tw`flex flex-row items-center space-x-4 cursor-pointer`}>
-          <p className={tw`font-medium text-xl text-black`} onClick={() => { scrollTo(HomeRef) }}>Footer Magueule</p>
+        <div className={tw`flex flex-row items-center space-x-4 cursor-pointer`}> <img src="/images/logo.svg" alt="logo baramo" />
+          <p className={tw`font-medium text-xl text-black`} onClick={() => { scrollTo(HomeRef) }}>BARAMO</p>
         </div>
         <div className={tw`flex flex-row items-center space-x-10 text-black`}>
           <div className={tw`cursor-pointer`} onClick={() => { scrollTo(WeAreRef) }}>Mentions Légales</div>
