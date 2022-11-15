@@ -165,9 +165,7 @@ export default function Home() {
         <div className={tw`flex flex-row items-center space-x-10 text-black`}>
           <div className={tw`cursor-pointer`} onClick={() => { scrollTo(WeAreRef) }}>Mentions Légales</div>
           <div className={tw`cursor-pointer`} onClick={() => { scrollTo(ServicesRef) }}>Politiques de Confidentialités</div>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(CreationsRef) }}>Nos créations</div>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(EquipeRef) }}>Accueil</div>
-          <div className={tw`text-[#9747FF] cursor-pointer`} onClick={() => { scrollTo(ContactRef) }}>CONTACT</div>
+
         </div>
 
       </div>
