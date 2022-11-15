@@ -10,6 +10,7 @@ import CreationCard from "../src/components/creationcard";
 import ContactSection from '../src/components/ContactSection';
 import { useRef } from 'react';
 import TeamSection from '../src/components/TeamSection';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -73,10 +74,10 @@ export default function Home() {
         <div className={tw`absolute`}>
           <img className={tw`h-[90vh]`} src="/images/bulleback.svg" alt="" />
         </div>
-        <div className={tw`px-20 max-w-[60%]`}>
+        <div className={tw`px-20 max-w-[60%] z-10`}>
           <h2>QUI SOMMES NOUS</h2>
           <p className={tw`text-base text-gray-500 mt-8`}> Lorem ipsum dolor sit amet, consectetur adipiscing elit dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-          <div className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
+          <div onClick={() => { scrollTo(CreationsRef) }} className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
             <p className={tw`font-bold text-black text-lg`}> DÉCOUVRIR NOS CRÉATIONS</p>
             <img src="/images/fleche.png" alt="" />
           </div>
@@ -163,8 +164,8 @@ export default function Home() {
         <div className={tw`flex flex-row items-center space-x-4 cursor-pointer`} onClick={() => { scrollTo(HomeRef) }}> <img src="/images/logo.svg" alt="logo baramo" />
         </div>
         <div className={tw`flex flex-row items-center space-x-10 text-black`}>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(WeAreRef) }}>Mentions Légales</div>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(ServicesRef) }}>Politiques de Confidentialités</div>
+          <Link href='/terms' className={tw`cursor-pointer`}>Mentions Légales</Link>
+          <Link href='/privacy' className={tw`cursor-pointer`}>Politiques de Confidentialités</Link>
 
         </div>
 
