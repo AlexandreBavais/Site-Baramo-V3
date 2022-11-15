@@ -14,6 +14,7 @@ import TeamSection from '../src/components/TeamSection';
 export default function Home() {
 
   const NavbarRef = useRef(null);
+  const Footer = useRef(null);
   const HomeRef = useRef(null);
   const WeAreRef = useRef(null);
   const ServicesRef = useRef(null);
@@ -157,6 +158,21 @@ export default function Home() {
       <div ref={ContactRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black px-20`}>
         <ContactSection />
       </div>
-    </div>
+
+      <div ref={Footer} className={tw`flex w-full h-[10vh] items-center px-10 justify-between sticky top-0 z-20`}>
+        <div className={tw`flex flex-row items-center space-x-4 cursor-pointer`}>
+          <p className={tw`font-medium text-xl text-black`} onClick={() => { scrollTo(HomeRef) }}>Footer Magueule</p>
+        </div>
+        <div className={tw`flex flex-row items-center space-x-10 text-black`}>
+          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(WeAreRef) }}>Mentions Légales</div>
+          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(ServicesRef) }}>Politiques de Confidentialités</div>
+          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(CreationsRef) }}>Nos créations</div>
+          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(EquipeRef) }}>Accueil</div>
+          <div className={tw`text-[#9747FF] cursor-pointer`} onClick={() => { scrollTo(ContactRef) }}>CONTACT</div>
+        </div>
+
+      </div>
+      </div>
+    
   )
 }
