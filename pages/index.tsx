@@ -76,8 +76,8 @@ export default function Home() {
         </div>
         <div className={tw`px-20 max-w-[60%] z-10`}>
           <h2>QUI SOMMES NOUS</h2>
-          <p className={tw`text-base text-gray-500 mt-8`}> Une équipe de choc ! Ajoutons un peu plus de précisions. Nous pourrons vous apporter une amélioration de votre Image de marque grace à notre Graphic Designer Senior. Par la suite, lors de la création de votre site, Un UX/Ui Designer (User experience et User Interface) pourra mettre en place une interface web à votre image, grâce à son expertise. Ce travaille étant fait, il est temps de créer ce fameux site web ! Une équipe de deux ingénieur informaticiens avec un grand bagage de projets à leurs actifs pourrons gérer une bonne intégrations et le bon fonctionnement du site Web. Mais n’oublions pas l’un des points important, le bon référencement de votre site Web (SEO) qui sera gérer par un expert SEO, vous permettant de toucher plus facilement votre audience. 
-Une équipe, mais pas seulement des amis passionnés par leurs métier avant tout.  </p>
+          <p className={tw`text-base text-gray-500 mt-8`}> Une équipe de choc ! Ajoutons un peu plus de précision. Nous pourrons vous apporter une amélioration de votre image de marque grace à notre Graphic Designer Senior. Par la suite, lors de la création de votre site, Un UX/Ui Designer (User experience et User Interface) pourra mettre en place une interface web à votre image, grâce à son expertise. Ce travail étant fait, il est temps de créer ce fameux site web ! Une équipe de deux ingénieurs informaticiens, avec un grand bagage de projets à leurs actifs, pourront gérer une bonne intégration et le bon fonctionnement du site Web. Mais n’oublions pas l’un des points important, le bon référencement de votre site Web (SEO) qui sera géré par un expert SEO, vous permettant de toucher plus facilement votre audience.
+            Une équipe, mais pas seulement des amis passionnés par leurs métiers avant tout.  </p>
           <div onClick={() => { scrollTo(CreationsRef) }} className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
             <p className={tw`font-bold text-black text-lg`}> DÉCOUVRIR NOS CRÉATIONS</p>
             <img src="/images/fleche.png" alt="" />
@@ -101,19 +101,19 @@ Une équipe, mais pas seulement des amis passionnés par leurs métier avant tou
           <div className={tw`flex flex-col items-center space-y-8`}>
             <Lottie className={tw`h-48`} animationData={DesignLottie} loop={true} />
             <h3 className={tw`text-2xl`}>DESIGN</h3>
-            <p className={tw`text-base text-center text-gray-500`}> Logo, Charte graphic, Web Design, créations personnalisées pour vos réseaux sociaux, et bien d’autre ! Notre équipe de designer peut répondre à vos envies vous proposant leurs expertise et créant des designs à votre image.  </p>
+            <p className={tw`text-base text-center text-gray-500`}> Logo, Charte graphique, Web Design, créations personnalisées pour vos réseaux sociaux, et bien d’autres ! Notre équipe de designer peut répondre à vos envies vous proposant leurs expertises et créant des designs à votre image.  </p>
 
           </div>
           <div className={tw`flex flex-col items-center space-y-8`}>
             <Lottie className={tw`h-48`} animationData={DevLottie} loop={true} />
             <h3 className={tw`text-2xl`}>DEVELOPPEMENT</h3>
-            <p className={tw`text-base text-center text-gray-500`}> Intégration Web Design, CMS, Site brut. Notre équipe d’ingénieur en développement vous apportera qualité et rapidité. Avec la meilleure expérience utilisateur, pour l’interface de votre site web soit accessible et facilement compréhensible par tous.   </p>
+            <p className={tw`text-base text-center text-gray-500`}> Intégration Web design, CMS, Site brut. Notre équipe d’ingénieurs en développement vous apportera qualité et rapidité. Avec la meilleure expérience utilisateur, pour l’interface de votre site web soit accessible et facilement compréhensible par tous.   </p>
 
           </div>
           <div className={tw`flex flex-col items-center space-y-8`}>
             <Lottie className={tw`h-48`} animationData={SeoLottie} loop={true} />
             <h3 className={tw`text-2xl`}>SEO</h3>
-            <p className={tw`text-base text-center text-gray-500`}> Les utilisateurs ont du mal à vous trouver ou le traffic sur votre site web est faible ? Laissez notre expert référencement s’occuper d’amélioration de votre contenu et votre traffic.  </p>
+            <p className={tw`text-base text-center text-gray-500`}> Les utilisateurs ont du mal à vous trouver ou le trafic sur votre site web est faible ? Laissez notre expert référencement s’occuper d’amélioration de votre contenu et votre trafic.  </p>
 
           </div>
           <div className={tw`flex flex-col items-center space-y-8`}>
@@ -171,7 +171,7 @@ Une équipe, mais pas seulement des amis passionnés par leurs métier avant tou
         </div>
 
       </div>
-      </div>
-    
+    </div>
+
   )
 }
