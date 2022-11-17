@@ -10,17 +10,20 @@ const TeamSection = (props: any) => {
     "lucas" : {
       nom : "LUCAS RAMADOUR",
       image : "/images/bu-s.jpg",
-      description : "Descritpion"
+      role : "Developpeur FullStack",
+      description : "Foufoune des bois jolies"
     },
     "alexandre" : {
       nom : "ALEXANDRE BAVAIS",
       image : "/images/bu-s.jpg",
-      description : "Descritpion"
+      role : "DIEU",  
+      description : "Je suis le modèle du GIGACHAD"
     },
     "clement" : {
       nom : "CLEMENT MOLLER",
       image : "/images/bu-s.jpg",
-      description : "Descritpion"
+      role : "Enfant pas content",
+      description : "Vendeur de beigneur sur la plage"
     }
   }
 
@@ -56,7 +59,8 @@ const TeamSection = (props: any) => {
         <img className={tw`h-48`} src={displayedData?.image} alt=''/>
         <div className={tw`flex flex-col`}>
           <div className={tw`text-2xl font-bold`}>{displayedData?.nom || ''}</div>
-          <div className={tw`text-2xl`}>{displayedData?.description || ''}</div>
+          <div className={tw`text-2xl`}>{displayedData?.role || ''}</div>
+          <div className={tw`text-base text-gray-500`}>{displayedData?.description || ''}</div>
         </div>
       </div>
     </div>
