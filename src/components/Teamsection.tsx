@@ -11,19 +11,19 @@ const TeamSection = (props: any) => {
       nom : "LUCAS RAMADOUR",
       image : "/images/bu-s.jpg",
       role : "Developpeur FullStack",
-      description : "Foufoune des bois jolies"
+      description : "Super beau"
     },
     "alexandre" : {
       nom : "ALEXANDRE BAVAIS",
       image : "/images/bu-s.jpg",
-      role : "DIEU",  
-      description : "Je suis le modèle du GIGACHAD"
+      role : "Graphic Designer",  
+      description : "A peur de sa propre ombre"
     },
     "clement" : {
       nom : "CLEMENT MOLLER",
       image : "/images/bu-s.jpg",
-      role : "Enfant pas content",
-      description : "Vendeur de beigneur sur la plage"
+      role : "Developpeur Solidity",
+      description : "Vendeur de beigner sur la plage"
     }
   }
 
