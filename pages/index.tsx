@@ -51,12 +51,12 @@ export default function Home() {
 
       </div>
 
-      <div ref={HomeRef} className={tw`flex w-full h-[90vh] px-10 text-9xl items-center text-black`}>
-        <div className={tw`flex h-full items-end pb-10 `}> <img src="/images/scroll.svg" alt="barre de scroll" /> </div>
-        <div className={tw`px-20 max-w-[60%]`}>
-          <h1> CRÉONS LA</h1>
-          <h1 className={tw`text-right`}>MEILLEURE </h1>
-          <h1 className={tw`text-[#9747FF]`}> EXPERIENCE </h1>
+      <div ref={HomeRef} className={tw`flex flex-col md:flex-row w-full h-auto md:h-[90vh] md:px-10 text-9xl items-center text-black`}>
+        <div className={tw`hidden md:flex h-full items-end pb-10 `}> <img src="/images/scroll.svg" alt="barre de scroll" /> </div>
+        <div className={tw`pt-10 md:pt-0 px-10 md:px-20 sm:max-w-[60%]`}>
+          <h1 className={tw`text-4xl md:text-9xl`}> CRÉONS LA</h1>
+          <h1 className={tw`text-4xl md:text-9xl text-right`}>MEILLEURE </h1>
+          <h1 className={tw`text-4xl md:text-9xl text-[#9747FF]`}> EXPERIENCE </h1>
           <p className={tw`text-base text-gray-400 mt-8`}> Vous accompagner dans tous vos projets pour vous permettre de toucher et développer votre audience plus facilement.  </p>
 
         </div>
@@ -69,13 +69,13 @@ export default function Home() {
       <div className={tw`flex w-full pl-20 pt-20`}>
         <img src="/images/separateur.png" alt="" />
       </div>
-      <div ref={WeAreRef} className={tw`flex w-full h-[90vh] text-8xl items-center text-black`}>
+      <div ref={WeAreRef} className={tw`flex flex-col md:flex-row pt-10 md:pt-0 w-full h-auto md:h-[90vh] text-8xl md:items-center text-black`}>
 
         <div className={tw`absolute`}>
           <img className={tw`h-[90vh]`} src="/images/bulleback.svg" alt="" />
         </div>
-        <div className={tw`px-20 max-w-[60%] z-10`}>
-          <h2>QUI SOMMES NOUS</h2>
+        <div className={tw`px-20 md:max-w-[60%] z-10`}>
+          <h2 className={tw`text-4xl md:text-9xl`}>QUI SOMMES NOUS</h2>
           <p className={tw`text-base text-gray-500 mt-8`}> Une équipe de choc ! Ajoutons un peu plus de précision. Nous pourrons vous apporter une amélioration de votre image de marque grâce à notre Graphic Designer Senior. Par la suite, lors de la création de votre site, un UX/UI Designer (User Experience et User Interface) pourra mettre en place une interface web à votre image, grâce à son expertise. Ce travail étant fait, il est temps de créer ce fameux site web ! Une équipe de deux ingénieurs informaticiens, avec un grand bagage de projets à leurs actifs, pourront gérer une bonne intégration et le bon fonctionnement du site Web. Mais n’oublions pas l’un des points important, le bon référencement de votre site Web (SEO) qui sera géré par un expert SEO, vous permettant de toucher plus facilement votre audience.
           <br/>Une équipe, mais pas seulement des amis passionnés par leurs métiers avant tout.  </p>
           <div onClick={() => { scrollTo(CreationsRef) }} className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
@@ -83,7 +83,7 @@ export default function Home() {
             <img src="/images/fleche.png" alt="" />
           </div>
         </div>
-        <div>
+        <div className={tw`flex items-center justify-center`}>
           <img className={tw`w-[90%]`} src="/images/imageteam.png" alt="image de l'équipe" />
         </div>
       </div>
@@ -91,13 +91,13 @@ export default function Home() {
         <img src="/images/separateur.png" alt="" />
       </div>
 
-      <div ref={ServicesRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black`}>
-        <div className={tw`px-20 max-w-[60%]`}>
-          <h2>NOS SERVICES</h2>
+      <div ref={ServicesRef} className={tw`flex flex-col pt-10 sm:pt-0 w-full h-auto md:h-[90vh] text-8xl justify-evenly text-black`}>
+        <div className={tw`px-20 md:max-w-[60%]`}>
+          <h2 className={tw`text-4xl md:text-9xl`}>NOS SERVICES</h2>
           <p className={tw`text-base text-gray-500 mt-8`}> Nous proposons des services à la hauteur de vos envies, alliant qualité, rapidité, mais surtout en restant à votre écoute.  </p>
 
         </div>
-        <div className={tw`flex w-full justify-evenly flex-row items-center space-x-10 text-black text-lg px-10`}>
+        <div className={tw`flex w-full justify-evenly flex-col md:flex-row items-center md:space-x-10 text-black text-lg px-10`}>
           <div className={tw`flex flex-col items-center space-y-8`}>
             <Lottie className={tw`h-48`} animationData={DesignLottie} loop={true} />
             <h3 className={tw`text-2xl`}>DESIGN</h3>
@@ -127,18 +127,18 @@ export default function Home() {
       <div className={tw`flex w-full pl-20 pt-20`}>
         <img src="/images/separateur.png" alt="" />
       </div>
-      <div ref={CreationsRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black`}>
+      <div ref={CreationsRef} className={tw`flex flex-col pt-10 lg:pt-0 w-full h-auto lg:h-[90vh] text-8xl justify-evenly text-black`}>
 
         <div className={tw`absolute right-0`}>
           <img className={tw`h-[90vh]`} src="/images/bulleback2.svg" alt="" />
         </div>
         <div className={tw`px-20 max-w-[60%]`}>
-          <h2>NOS CRÉATIONS</h2>
+          <h2 className={tw`text-4xl md:text-9xl`}>NOS CRÉATIONS</h2>
           <p className={tw`text-base text-gray-500 mt-8`}> Découvrez quelques idées de notre travail. </p>
           <div className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
           </div>
         </div>
-        <div className={tw`flex flex-row justify-evenly`}>
+        <div className={tw`flex flex-col lg:flex-row justify-evenly items-center`}>
           <CreationCard image="/images/bu-s.jpg" titre="BRANDING" offset={0} />
           <CreationCard image="/images/olw.jpg" titre="WEB SITE" offset={75} />
           <CreationCard image="/images/bu-v1.png" titre="UX/UI DESIGN" offset={0} />
@@ -150,14 +150,14 @@ export default function Home() {
       <div className={tw`flex w-full pl-20 pt-20`}>
         <img src="/images/separateur.png" alt="" />
       </div>
-      <div ref={EquipeRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black px-20`}>
+      <div ref={EquipeRef} className={tw`flex flex-col w-full h-auto md:h-[90vh] text-8xl justify-evenly text-black px-20`}>
         <TeamSection />
 
       </div>
       <div className={tw`flex w-full pl-20 pt-20`}>
         <img src="/images/separateur.png" alt="" />
       </div>
-      <div ref={ContactRef} className={tw`flex flex-col w-full h-[90vh] text-8xl justify-evenly text-black px-20`}>
+      <div ref={ContactRef} className={tw`flex flex-col w-full h-auto min-h-[90vh] md:h-[90vh] text-8xl justify-evenly text-black px-20`}>
         <ContactSection />
       </div>
 
