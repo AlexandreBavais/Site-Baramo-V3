@@ -132,7 +132,7 @@ export default function Home() {
         <div className={tw`absolute right-0`}>
           <img className={tw`h-[90vh]`} src="/images/bulleback2.svg" alt="" />
         </div>
-        <div className={tw`px-20 max-w-[60%]`}>
+        <div className={tw`px-20 md:max-w-[60%]`}>
           <h2 className={tw`text-4xl md:text-9xl`}>NOS CRÉATIONS</h2>
           <p className={tw`text-base text-gray-500 mt-8`}> Découvrez quelques idées de notre travail. </p>
           <div className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
@@ -150,7 +150,7 @@ export default function Home() {
       <div className={tw`flex w-full pl-20 pt-20`}>
         <img src="/images/separateur.png" alt="" />
       </div>
-      <div ref={EquipeRef} className={tw`flex flex-col w-full h-auto md:h-[90vh] text-8xl justify-evenly text-black px-20`}>
+      <div ref={EquipeRef} className={tw`flex flex-col pt-10 lg:pt-0 w-full h-auto md:h-[90vh] text-8xl justify-evenly text-black px-20`}>
         <TeamSection />
 
       </div>

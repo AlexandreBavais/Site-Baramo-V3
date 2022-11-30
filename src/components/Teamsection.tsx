@@ -29,9 +29,9 @@ const TeamSection = (props: any) => {
 
   const displayedData = data[selected]
 
-  return (
-    <div className={tw`flex flex-row `}>
-      <div className={tw`px-20 w-2/3`}>
+  return (<div>
+    <div className={tw`hidden lg:flex flex-row`}>
+      <div className={tw`px-20 w-[60%]`}>
         <h2>LA TEAM</h2>
         <div 
           onMouseEnter={()=>{ setSelected("lucas"); setHovered(true) }} 
@@ -55,14 +55,33 @@ const TeamSection = (props: any) => {
           ALEXANDRE BAVAIS
         </div>
       </div>
-      <div className={tw`opacity-0 mt-10 flex flex-row space-x-6 ${hovered ? "opacity-100 mt-0" : ""} transition-all ease-in-out duration-500`}>
-        <img className={tw`h-48`} src={displayedData?.image} alt=''/>
-        <div className={tw`flex flex-col`}>
-          <div className={tw`text-2xl font-bold`}>{displayedData?.nom || ''}</div>
-          <div className={tw`text-2xl`}>{displayedData?.role || ''}</div>
-          <div className={tw`text-base text-gray-500`}>{displayedData?.description || ''}</div>
+      <div className={tw`flex h-full justify-center items-center`}>
+        <div className={tw`opacity-0 h-auto mt-10 flex flex-row space-x-6 ${hovered ? "opacity-100 mt-0" : ""} transition-all ease-in-out duration-500 `}>
+          <img className={tw`h-56`} src={displayedData?.image} alt=''/>
+          <div className={tw`flex flex-col`}>
+            <div className={tw`text-2xl font-bold`}>{displayedData?.nom || ''}</div>
+            <div className={tw`text-2xl`}>{displayedData?.role || ''}</div>
+            <div className={tw`text-base text-gray-500`}>{displayedData?.description || ''}</div>
+          </div>
         </div>
       </div>
+    </div>
+    <div className={tw`flex lg:hidden flex-col space-x-0`}>
+      <div className={tw`px-10 w-full`}>
+        <h2 className={tw`text-4xl md:text-9xl`}>LA TEAM</h2>
+      </div>
+      {
+        Object.keys(data).map((key: string) => <div className={tw`flex flex-col sm:flex-row h-full justify-center items-center sm:items-start h-auto mt-10 sm:space-x-6`}>
+          <img className={tw`h-56 w-56`} src={data[key]?.image} alt='' />
+          <div className={tw`flex flex-col w-72`}>
+            <div className={tw`text-2xl font-bold text-center sm:text-left`}>{data[key]?.nom || ''}</div>
+            <div className={tw`text-2xl text-center sm:text-left`}>{data[key]?.role || ''}</div>
+            <div className={tw`text-base text-gray-500 text-center sm:text-left`}>{data[key]?.description || ''}</div>
+          </div>
+        </div>)
+      }
+
+    </div>
     </div>
   )
 }
