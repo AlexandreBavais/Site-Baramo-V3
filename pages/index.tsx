@@ -8,7 +8,7 @@ import SeoLottie from "../public/lottie/seo.json";
 import BlockLottie from "../public/lottie/block.json";
 import CreationCard from "../src/components/creationcard";
 import ContactSection from '../src/components/ContactSection';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import TeamSection from '../src/components/TeamSection';
 import Link from 'next/link';
 
@@ -22,6 +22,9 @@ export default function Home() {
   const CreationsRef = useRef(null);
   const EquipeRef = useRef(null);
   const ContactRef = useRef(null);
+
+  const [showMenu, setShowMenu] = useState(false)
+  console.log(showMenu)
 
   const scrollTo = (ref: any) => {
     window.scrollTo({ top: ref.current.getBoundingClientRect().top + window.pageYOffset - (NavbarRef?.current?.clientHeight || 0), behavior: 'smooth' })
@@ -37,19 +40,32 @@ export default function Home() {
       </Head>
 
 
-      <div ref={NavbarRef} className={tw`flex w-full h-[10vh] items-center px-10 justify-between sticky top-0 ${css({ "backdrop-filter": "blur(25px)" })} z-20`}>
-        <div className={tw`flex flex-row items-center space-x-4 cursor-pointer`}> <img src="/images/logo.svg" alt="logo baramo" />
-          <p className={tw`font-medium text-xl text-black`} onClick={() => { scrollTo(HomeRef) }}>BARAMO</p>
+      <div ref={NavbarRef} className={tw`flex flex-col w-full items-center px-10 justify-between sticky top-0 ${css({ "backdrop-filter": "blur(25px)" })} z-20`}>
+        <div className={tw`flex flex-row h-[10vh] justify-between items-center w-full`}>
+          <div className={tw`flex flex-row items-center space-x-4 cursor-pointer`}> <img src="/images/logo.svg" alt="logo baramo" />
+            <p className={tw`font-medium text-xl text-black`} onClick={() => { scrollTo(HomeRef) }}>BARAMO</p>
+          </div>
+          <div className={tw`hidden lg:flex flex-row items-center space-x-10 text-black`}>
+            <div className={tw`cursor-pointer`} onClick={() => { scrollTo(WeAreRef) }}>À PROPOS</div>
+            <div className={tw`cursor-pointer`} onClick={() => { scrollTo(ServicesRef) }}>SERVICES</div>
+            <div className={tw`cursor-pointer`} onClick={() => { scrollTo(CreationsRef) }}>CRÉATIONS</div>
+            <div className={tw`cursor-pointer`} onClick={() => { scrollTo(EquipeRef) }}>ÉQUIPE</div>
+            <div className={tw`text-[#9747FF] cursor-pointer`} onClick={() => { scrollTo(ContactRef) }}>CONTACT</div>
+          </div>
+          <div onClick={() => setShowMenu(!showMenu)} className={tw`flex lg:hidden flex-row items-center space-x-10 text-black cursor-pointer`}><img className={tw`h-5 w-5`} src={showMenu ? '/images/CrossIcon.png' : '/images/MenuIcon.png'} /></div>
         </div>
-        <div className={tw`flex flex-row items-center space-x-10 text-black`}>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(WeAreRef) }}>À PROPOS</div>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(ServicesRef) }}>SERVICES</div>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(CreationsRef) }}>CRÉATIONS</div>
-          <div className={tw`cursor-pointer`} onClick={() => { scrollTo(EquipeRef) }}>ÉQUIPE</div>
-          <div className={tw`text-[#9747FF] cursor-pointer`} onClick={() => { scrollTo(ContactRef) }}>CONTACT</div>
-        </div>
-
+        {showMenu && <div className={tw`flex top-[10vh] justify-center items-center lg:hidden w-full ${css({ "backdrop-filter": "blur(25px)" })} z-30`}>
+          <div className={tw`flex flex-col items-center text-black`}>
+            <div className={tw`cursor-pointer p-5`} onClick={() => { scrollTo(WeAreRef); setShowMenu(false) }}>À PROPOS</div>
+            <div className={tw`cursor-pointer p-5`} onClick={() => { scrollTo(ServicesRef); setShowMenu(false) }}>SERVICES</div>
+            <div className={tw`cursor-pointer p-5`} onClick={() => { scrollTo(CreationsRef); setShowMenu(false) }}>CRÉATIONS</div>
+            <div className={tw`cursor-pointer p-5`} onClick={() => { scrollTo(EquipeRef); setShowMenu(false) }}>ÉQUIPE</div>
+            <div className={tw`text-[#9747FF] cursor-pointer p-5`} onClick={() => { scrollTo(ContactRef); setShowMenu(false) }}>CONTACT</div>
+          </div>
+        </div>}
       </div>
+        
+      
 
       <div ref={HomeRef} className={tw`flex flex-col md:flex-row w-full h-auto md:h-[90vh] md:px-10 text-9xl items-center text-black`}>
         <div className={tw`hidden md:flex h-full items-end pb-10 `}> <img src="/images/scroll.svg" alt="barre de scroll" /> </div>

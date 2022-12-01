@@ -71,7 +71,7 @@ const TeamSection = (props: any) => {
         <h2 className={tw`text-4xl md:text-9xl`}>LA TEAM</h2>
       </div>
       {
-        Object.keys(data).map((key: string) => <div className={tw`flex flex-col sm:flex-row h-full justify-center items-center sm:items-start h-auto mt-10 sm:space-x-6`}>
+        Object.keys(data).map((key: string) => <div key={key} className={tw`flex flex-col sm:flex-row h-full justify-center items-center sm:items-start h-auto mt-10 sm:space-x-6`}>
           <img className={tw`h-56 w-56`} src={data[key]?.image} alt='' />
           <div className={tw`flex flex-col w-72`}>
             <div className={tw`text-2xl font-bold text-center sm:text-left`}>{data[key]?.nom || ''}</div>
