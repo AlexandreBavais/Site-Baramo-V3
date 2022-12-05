@@ -9,19 +9,19 @@ const TeamSection = (props: any) => {
   const data: any = {
     "lucas" : {
       nom : "LUCAS RAMADOUR",
-      image : "/images/bu-s.jpg",
+      image : "/images/lucas.jpg",
       role : "Developpeur FullStack",
       description : "Super beau"
     },
     "alexandre" : {
       nom : "ALEXANDRE BAVAIS",
-      image : "/images/bu-s.jpg",
+      image : "/images/alexandre.jpg",
       role : "Graphic Designer",  
       description : "A peur de sa propre ombre"
     },
     "clement" : {
       nom : "CLEMENT MOLLER",
-      image : "/images/bu-s.jpg",
+      image : "/images/clement.jpg",
       role : "Developpeur Solidity",
       description : "Vendeur de beigner sur la plage"
     }
@@ -55,13 +55,12 @@ const TeamSection = (props: any) => {
           ALEXANDRE BAVAIS
         </div>
       </div>
-      <div className={tw`flex h-full justify-center items-center`}>
-        <div className={tw`opacity-0 h-auto mt-10 flex flex-row space-x-6 ${hovered ? "opacity-100 mt-0" : ""} transition-all ease-in-out duration-500 `}>
+      <div className={tw`flex min-h-full justify-center items-center`}>
+        <div className={tw`opacity-0 h-56 mt-10 flex flex-row space-x-6 ${hovered ? "opacity-100 mt-0" : ""} transition-all ease-in-out duration-500 `}>
           <img className={tw`h-56`} src={displayedData?.image} alt=''/>
           <div className={tw`flex flex-col`}>
             <div className={tw`text-2xl font-bold`}>{displayedData?.nom || ''}</div>
             <div className={tw`text-2xl`}>{displayedData?.role || ''}</div>
-            <div className={tw`text-base text-gray-500`}>{displayedData?.description || ''}</div>
           </div>
         </div>
       </div>
@@ -76,7 +75,6 @@ const TeamSection = (props: any) => {
           <div className={tw`flex flex-col w-72`}>
             <div className={tw`text-2xl font-bold text-center sm:text-left`}>{data[key]?.nom || ''}</div>
             <div className={tw`text-2xl text-center sm:text-left`}>{data[key]?.role || ''}</div>
-            <div className={tw`text-base text-gray-500 text-center sm:text-left`}>{data[key]?.description || ''}</div>
           </div>
         </div>)
       }

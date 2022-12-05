@@ -24,7 +24,6 @@ export default function Home() {
   const ContactRef = useRef(null);
 
   const [showMenu, setShowMenu] = useState(false)
-  console.log(showMenu)
 
   const scrollTo = (ref: any) => {
     window.scrollTo({ top: ref.current.getBoundingClientRect().top + window.pageYOffset - (NavbarRef?.current?.clientHeight || 0), behavior: 'smooth' })
