@@ -14,14 +14,14 @@ import Link from 'next/link';
 
 export default function Home() {
 
-  const NavbarRef = useRef(null);
-  const Footer = useRef(null);
-  const HomeRef = useRef(null);
-  const WeAreRef = useRef(null);
-  const ServicesRef = useRef(null);
-  const CreationsRef = useRef(null);
-  const EquipeRef = useRef(null);
-  const ContactRef = useRef(null);
+  const NavbarRef = useRef<any>(null);
+  const Footer = useRef<any>(null);
+  const HomeRef = useRef<any>(null);
+  const WeAreRef = useRef<any>(null);
+  const ServicesRef = useRef<any>(null);
+  const CreationsRef = useRef<any>(null);
+  const EquipeRef = useRef<any>(null);
+  const ContactRef = useRef<any>(null);
 
   const [showMenu, setShowMenu] = useState(false)
 

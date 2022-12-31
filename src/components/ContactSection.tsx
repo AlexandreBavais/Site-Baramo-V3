@@ -19,11 +19,6 @@ const ContactSection = () => {
                 subject: 'Nouveau message depuis le site',
                 text: `Nom : ${name} \n \n  Email : ${email} \n \n Message : ${text}`
             },
-            {
-                headers: {
-                    'content-type': 'application/json',
-                }
-            }
         ).then(() => setSend(true))
     }
     return (
