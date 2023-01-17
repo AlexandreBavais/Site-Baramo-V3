@@ -63,8 +63,8 @@ export default function Home() {
           </div>
         </div>}
       </div>
-        
-      
+
+
 
       <div ref={HomeRef} className={tw`flex flex-col md:flex-row w-full h-auto md:h-[90vh] md:px-10 text-9xl items-center text-black`}>
         <div className={tw`hidden md:flex h-full items-end pb-10 `}> <img src="/images/scroll.svg" alt="barre de scroll" /> </div>
@@ -92,7 +92,7 @@ export default function Home() {
         <div className={tw`px-20 md:max-w-[60%] z-10`}>
           <h2 className={tw`text-4xl md:text-9xl`}>QUI SOMMES NOUS</h2>
           <p className={tw`text-base text-gray-500 mt-8`}> Une équipe de choc ! Ajoutons un peu plus de précision. Nous pourrons vous apporter une amélioration de votre image de marque grâce à notre Graphic Designer Senior. Par la suite, lors de la création de votre site, un UX/UI Designer (User Experience et User Interface) pourra mettre en place une interface web à votre image, grâce à son expertise. Ce travail étant fait, il est temps de créer ce fameux site web ! Une équipe de deux ingénieurs informaticiens, avec un grand bagage de projets à leurs actifs, pourront gérer une bonne intégration et le bon fonctionnement du site Web. Mais n’oublions pas l’un des points important, le bon référencement de votre site Web (SEO) qui sera géré par un expert SEO, vous permettant de toucher plus facilement votre audience.
-          <br/>Une équipe, mais pas seulement des amis passionnés par leurs métiers avant tout.  </p>
+            <br />Une équipe, mais pas seulement des amis passionnés par leurs métiers avant tout.  </p>
           <div onClick={() => { scrollTo(CreationsRef) }} className={tw`flex flex-row items-center space-x-10 cursor-pointer mt-8`}>
             <p className={tw`font-bold text-black text-lg`}> DÉCOUVRIR NOS CRÉATIONS</p>
             <img src="/images/fleche.png" alt="" />
@@ -157,7 +157,7 @@ export default function Home() {
           <CreationCard image="/images/bu-s.jpg" titre="BRANDING" offset={0} />
           <CreationCard image="/images/olw.jpg" titre="WEB SITE" offset={75} />
           <CreationCard image="/images/bu-v1.png" titre="UX/UI DESIGN" offset={0} />
-          <CreationCard image="/images/cryptoflower.png" titre="UX/UI DESIGN" offset={75} />
+          <CreationCard image="/images/cryptoflower.png" titre="CRYPTO WEBSITE" offset={75} />
           <CreationCard image="/images/facelight.jpg" titre="ILLUSTRATION" offset={0} />
         </div>
 
